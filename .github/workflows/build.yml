@@ -11,7 +11,7 @@ jobs:
     name: Organize Artifacts
     steps:
       - name: Download Firmware
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: firmware
           path: firmware
@@ -42,19 +42,19 @@ jobs:
           zip -r sofle_dongle_firmware.zip sofle_dongle
 
       - name: Upload Lily58
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: lily58_firmware
           path: lily58_firmware.zip
 
       - name: Upload Sofle Standard
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: sofle_standard_firmware
           path: sofle_standard_firmware.zip
 
       - name: Upload Sofle Dongle
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: sofle_dongle_firmware
           path: sofle_dongle_firmware.zip
