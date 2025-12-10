@@ -29,6 +29,8 @@ include:
 
   - board: nice_nano_v2
     shield: sofle_dongle
+  - board: nice_nano_v2
+    shield: settings_reset
 
   - board: sofle_choc_pro_left
     shield: nice_view_disp
