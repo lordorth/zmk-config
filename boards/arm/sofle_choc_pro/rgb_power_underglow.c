@@ -1,5 +1,5 @@
 /*
- * Auto-manage underglow: off on battery, rainbow when USB power is present.
+ * Auto-manage underglow: keep it off by default to save power.
  */
 #include <zephyr/device.h>
 #include <zephyr/init.h>
@@ -16,10 +16,8 @@ LOG_MODULE_REGISTER(rgb_power_underglow, CONFIG_ZMK_LOG_LEVEL);
 static void apply_power_policy(void) {
     const bool usb = zmk_usb_is_powered();
 
-    if (usb) {
-        (void)zmk_rgb_underglow_select_effect(EFFECT_SPECTRUM);
-        (void)zmk_rgb_underglow_on();
-    } else {
+    /* Default to off regardless of power source; user can still toggle manually. */
+    if (!usb) {
         (void)zmk_rgb_underglow_off();
     }
 }
