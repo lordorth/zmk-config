@@ -43,7 +43,6 @@
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
-        scan-direction = <0>;
         prechargep = <0x22>;
     };
 };
