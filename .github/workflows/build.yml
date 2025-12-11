@@ -25,9 +25,9 @@ jobs:
       - name: Prepare Sofle Standard
         run: |
           mkdir -p sofle_standard
-          cp firmware/sofle_choc_pro_left-nice_view_disp* sofle_standard/
-          cp firmware/sofle_choc_pro_right-nice_view_disp* sofle_standard/
-          cp firmware/sofle_choc_pro_*-settings_reset* sofle_standard/
+          cp firmware/nice_view_disp-sofle_choc_pro_left* sofle_standard/
+          cp firmware/nice_view_disp-sofle_choc_pro_right* sofle_standard/
+          cp firmware/settings_reset-sofle_choc_pro_* sofle_standard/
           zip -r sofle_standard_firmware.zip sofle_standard
 
       - name: Prepare Sofle Dongle
@@ -36,7 +36,7 @@ jobs:
           cp firmware/sofle_dongle* sofle_dongle/
           cp firmware/sofle_choc_pro_left_peripheral* sofle_dongle/
           # Reuse the right half peripheral
-          cp firmware/sofle_choc_pro_right-nice_view_disp* sofle_dongle/
+          cp firmware/nice_view_disp-sofle_choc_pro_right* sofle_dongle/
           # Dongle reset
           cp firmware/settings_reset-nice_nano_v2* sofle_dongle/
           zip -r sofle_dongle_firmware.zip sofle_dongle
