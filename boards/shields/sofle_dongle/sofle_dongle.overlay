@@ -33,8 +33,7 @@
     status = "disabled";
 };
 
-&led0 {
-    status = "disabled";
-};
+// nice!nano v2 devicetree in ZMK v0.3 doesn’t expose led0 as a labeled node for shields.
+// Remove the attempted override to avoid missing label errors.
 
 
