@@ -16,6 +16,9 @@ jobs:
           name: firmware
           path: firmware
 
+      - name: List Firmware Directory
+        run: ls -R firmware
+
       - name: Prepare Lily58
         run: |
           mkdir -p lily58
@@ -33,12 +36,15 @@ jobs:
       - name: Prepare Sofle Dongle
         run: |
           mkdir -p sofle_dongle
-          cp firmware/sofle_dongle* sofle_dongle/
-          cp firmware/sofle_choc_pro_left_peripheral* sofle_dongle/
-          # Reuse the right half peripheral
-          cp firmware/nice_view_disp-sofle_choc_pro_right* sofle_dongle/
-          # Dongle reset
-          cp firmware/settings_reset-nice_nano_v2* sofle_dongle/
+          # Dongle Firmware & Reset
+          cp firmware/sofle_dongle-nice_nano_v2-zmk.uf2 sofle_dongle/Dongle_Firmware.uf2
+          cp firmware/settings_reset-nice_nano_v2-zmk.uf2 sofle_dongle/Dongle_Reset.uf2
+          # Peripheral Firmware
+          cp firmware/sofle_choc_pro_left_peripheral-zmk.uf2 sofle_dongle/Left_Half_Peripheral.uf2
+          cp firmware/sofle_choc_pro_right_peripheral-zmk.uf2 sofle_dongle/Right_Half_Peripheral.uf2
+          # Peripheral Resets
+          cp firmware/settings_reset-sofle_choc_pro_left-zmk.uf2 sofle_dongle/Left_Half_Reset.uf2
+          cp firmware/settings_reset-sofle_choc_pro_right-zmk.uf2 sofle_dongle/Right_Half_Reset.uf2
           zip -r sofle_dongle_firmware.zip sofle_dongle
 
       - name: Upload Lily58
