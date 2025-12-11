@@ -22,4 +22,4 @@ static int led_init(const struct device *dev) {
 }
 
 SYS_INIT(led_init, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
-    }
+
