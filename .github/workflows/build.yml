@@ -40,8 +40,8 @@ jobs:
           cp firmware/sofle_dongle-nice_nano_v2-zmk.uf2 sofle_dongle/Dongle_Firmware.uf2
           cp firmware/settings_reset-nice_nano_v2-zmk.uf2 sofle_dongle/Dongle_Reset.uf2
           # Peripheral Firmware
-          cp firmware/sofle_choc_pro_left_peripheral-zmk.uf2 sofle_dongle/Left_Half_Peripheral.uf2
-          cp firmware/sofle_choc_pro_right_peripheral-zmk.uf2 sofle_dongle/Right_Half_Peripheral.uf2
+          cp firmware/sofle_choc_pro_left_peripheral.uf2 sofle_dongle/Left_Half_Peripheral.uf2
+          cp firmware/sofle_choc_pro_right_peripheral.uf2 sofle_dongle/Right_Half_Peripheral.uf2
           # Peripheral Resets
           cp firmware/settings_reset-sofle_choc_pro_left-zmk.uf2 sofle_dongle/Left_Half_Reset.uf2
           cp firmware/settings_reset-sofle_choc_pro_right-zmk.uf2 sofle_dongle/Right_Half_Reset.uf2
