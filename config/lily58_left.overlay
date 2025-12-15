@@ -6,9 +6,11 @@
     status = "disabled";
 };
 
+/*
 &oled {
     status = "disabled";
 };
+*/
 
 /* Optional: Disable encoder if not present, though usually harmless */
 /*
