@@ -23,6 +23,7 @@ jobs:
         run: |
           mkdir -p lily58
           cp firmware/lily58* lily58/
+          cp firmware/settings_reset-nice_nano_v2-zmk.uf2 lily58/settings_reset.uf2
           zip -r lily58_firmware.zip lily58
 
       - name: Prepare Sofle Standard
