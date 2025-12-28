@@ -1,0 +1,7 @@
+// Debug overlay for Lily58 Right
+// Disabling the matrix scan to rule out pin shorts causing boot failures.
+// If the board enumerates with this overlay, you have a short on one of the row/col pins.
+
+&kscan0 {
+    status = "disabled";
+};
